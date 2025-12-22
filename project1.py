@@ -4,7 +4,7 @@ import pandas as pd
 
 
 def main():
-    "Creating the project 1"
+    """Creating the project 1"""
     rng = np.random.default_rng(seed=41)
     arr = rng.integers(low=0, high=11, size=(12, 3))
     index = [i for i in range(1, 13)]
