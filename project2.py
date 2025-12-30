@@ -17,13 +17,14 @@ def main():
 
     columns = ["Math", "Physics", "Chemistry"]
     df_students = pd.DataFrame(scores_numpy, columns=columns)
-    df_students.index = [f"Student_{i+1}" for i in range(100)]
+    df_students.index = [f"Student_{i + 1}" for i in range(100)]
 
     # --- STEP 2: CALCULATE WEIGHTED AVERAGE ---
     weights = np.array([2, 1.5, 1])
 
     # Dot product efficiently handles (Math*2 + Physics*1.5 + Chemistry*1) for all rows
     weighted_sum = np.dot(scores_numpy, weights)
+    print(weighted_sum)
     df_students["Avg_Score"] = (weighted_sum / weights.sum()).round(2)
 
     # --- STEP 3: STUDENT CLASSIFICATION ---
